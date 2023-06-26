@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>comment-system</title>
+</head>
+
+<body>
+
+    <section class="up"></section>
+    <section class="bottom">
+        <div class="side-bar"></div>
+        <div class="container">
+            <div class="small-block visible"></div>
+            <div class="small-block visible"></div>
+            <div class="small-block"></div>
+            <div class="small-block"></div>
+            <div class="small-block"></div>
+            <div class="small-block"></div>
+            <div class="small-block"></div>
+            <div class="small-block"></div>
+            <div class="big-block"></div>
+            <div class="comment-section">
+                <div class="header">
+                    <h4 class="numberOfComments">Комментарии <span id="numberOfComments"></span></h4>
+                    <div class="header-buttons">
+                        <div class="dropdown">
+                            <div class="dropdown-toggle-container">
+                                <button class="dropdown-toggle">По дате</button>
+                            </div>
+                            <ul class="dropdown-menu">
+                                <li><button class="dropdown-item active" data-value="date">По дате </button></li>
+                                <li><button class="dropdown-item " data-value="likes">По количеству
+                                        оценок</button>
+                                </li>
+                                <li><button class="dropdown-item" data-value="date">По актуальности</button></li>
+                                <li><button class="dropdown-item" data-value="replies">По количеству ответов</button>
+                                </li>
+                            </ul>
+                        </div>
+                        <button id="favorites" class="favorites"><span>Избранное </span><img
+                                src="svg/4.svg" /></button>
+                    </div>
+                </div>
+                <div class="comment-form-container">
+                    <img id="icon" alt="Picture of Maxim">
+                    <form id="comment-form">
+                        <label class="comment-label" for="comment">
+                            <h5>Максим Авдеенко</h5><br>
+                            <div class="comment-container">
+                                <div id="comment-size-control" class="comment"></div>
+                                <textarea name="comment" id="comment" class="comment"
+                                    placeholder="Введите текст сообщения..."></textarea>
+                            </div>
+                            <div class="charsCounter">Макс. 1000 символов</div>
+                        </label>
+                        <button disabled id="comment-button">Отправить</button>
+                    </form>
+                    <div class="warning">Слишком длинное сообщение</div>
+                </div>
+                <div class="comments">
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <script src="index.js"></script>
+</body>
+
+</html>
